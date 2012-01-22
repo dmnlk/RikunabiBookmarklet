@@ -10,7 +10,7 @@ var f = document.forms[0];
 f.rikunabiCd.value = "hoge";
 f.password.value = "hoge";
 f.auto.checked = true;
-var btn
+var btn;
 if(document.location.toString().match(/https:\/\/sp.job.rikunabi.com/)){
     btn = document.getElementsByName("login")[0];
 }else{

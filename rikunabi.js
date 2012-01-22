@@ -1,7 +1,7 @@
 // https://job.rikunabi.com/2013/auth/topLoginform/?toplocationUrl=&topPattern=top&sslMode=1&menu=T
 // https://sp.job.rikunabi.com/lnk000/=https://job.rikunabi.com/2013/auth/topLoginform/?topPattern=top&topLocationUrl=&sslMode=0&menu=T/
 
-var url ="https://sp.job.rikunabi.com/lnk000/=https://job.rikunabi.com/2013/auth/topLoginform/?topPattern=top&topLocationUrl=&sslMode=0&menu=T/"
+var url ="https://job.rikunabi.com/2013/auth/topLoginform/?toplocationUrl=&topPattern=top&sslMode=1&menu=T";
 if(document.location==url){
     function simulateClick(obj) {
         var evt = document.createEvent("MouseEvents");

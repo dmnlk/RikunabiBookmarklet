@@ -10,10 +10,10 @@ var f = document.forms[0];
 f.rikunabiCd.value = "hoge";
 f.password.value = "hoge";
 f.auto.checked = true;
-var url ="https://job.rikunabi.com/2013/auth/topLoginform/?toplocationUrl=&topPattern=top&sslMode=1&menu=T";
-if(document.location==url){
-    var btn = document.getElementsByName("login")[0];
+var btn
+if(document.location.toString().match(/https:\/\/sp.job.rikunabi.com/)){
+    btn = document.getElementsByName("login")[0];
 }else{
-    var btn = f.lastElementChild.firstChild;
+    btn = f.lastElementChild.firstChild;
 }
-simulateClick(btn);
+Simulateclick(btn);

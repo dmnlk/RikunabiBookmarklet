@@ -16,4 +16,4 @@ if(document.location.toString().match(/https:\/\/sp.job.rikunabi.com/)){
 }else{
     btn = f.lastElementChild.firstChild;
 }
-Simulateclick(btn);
+simulateClick(btn);

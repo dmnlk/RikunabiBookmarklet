@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<META HTTP-EQUIV=content-type CONTENT="text/html; CHARSET=UTF-8" />
+<title>リクナビBookmarklet</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function CopyP(arg1,arg2){
+    if(document.Entry.Id.value==""){
+        alert("IDが未入力です");
+        return false;
+    }
+    if(document.Entry.Pass.value==""){
+        alert("パスワードが未入力です");
+        false;
+    }
+    var tmp="javascript:function simulateClick(obj){var evt=document.createEvent(\"MouseEvents\");evt.initMouseEvent(\"click\",true,true,window,0,0,0,0,0,false,false,false,false,0,null);obj.dispatchEvent(evt);}var f=document.forms[0];f.rikunabiCd.value=\""+arg1.value+"\";f.password.value=\""+arg2.value+"\";f.auto.checked=true;var btn;if(document.location.toString().match(/https:\\\/\\\/sp.job.rikunabi.com/)){btn=document.getElementsByName(\"login\")[0];}else{btn=f.lastElementChild.firstChild;}simulateClick(btn);";
+    window.prompt("Copy",tmp);
+    return true;
+}
+-->
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28088972-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+
+まずこのページをブックマークしてください。<br>
+次に下の項目を入力し、生成ボタンを押してください。<br>
+生成した文字列を全選択し、コピーしてください。<br>
+さっきブックマークしたページを編集しURL欄にコピーした文字列をペーストしてください<br>
+リクナビのログインページでブックマークからこのブックマークレットを開くとIDとパスを自動で入力してログインします。<br>
+IDとパスはサーバー側には送られません
+<form name="Entry" action="" method="post">
+    リクナビid<br>
+    <input type="text" name="Id" id="Id" size="30" maxlength="30"><br>
+    パスワード<br>
+    <input type="text" name="Pass" id="Pass" size="30" maxlength="30"><br>
+    <input type="button" name="copyprompt" value="生成" onClick="CopyP(Id,Pass);"><br>
+</form>
+</body>
+<html>
